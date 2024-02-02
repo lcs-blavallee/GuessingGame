@@ -8,17 +8,17 @@
 
 /* Begin PBXBuildFile section */
 		1AD9BB372B6D2AAE0081CA95 /* GuessingGameApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AD9BB362B6D2AAE0081CA95 /* GuessingGameApp.swift */; };
-		1AD9BB392B6D2AAE0081CA95 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AD9BB382B6D2AAE0081CA95 /* ContentView.swift */; };
 		1AD9BB3B2B6D2AB00081CA95 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1AD9BB3A2B6D2AB00081CA95 /* Assets.xcassets */; };
 		1AD9BB3E2B6D2AB10081CA95 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1AD9BB3D2B6D2AB10081CA95 /* Preview Assets.xcassets */; };
+		1AD9BB452B6D2DD80081CA95 /* GameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AD9BB442B6D2DD80081CA95 /* GameView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		1AD9BB332B6D2AAE0081CA95 /* GuessingGame.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GuessingGame.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1AD9BB362B6D2AAE0081CA95 /* GuessingGameApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GuessingGameApp.swift; sourceTree = "<group>"; };
-		1AD9BB382B6D2AAE0081CA95 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		1AD9BB3A2B6D2AB00081CA95 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1AD9BB3D2B6D2AB10081CA95 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		1AD9BB442B6D2DD80081CA95 /* GameView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,8 +51,8 @@
 		1AD9BB352B6D2AAE0081CA95 /* GuessingGame */ = {
 			isa = PBXGroup;
 			children = (
+				1AD9BB442B6D2DD80081CA95 /* GameView.swift */,
 				1AD9BB362B6D2AAE0081CA95 /* GuessingGameApp.swift */,
-				1AD9BB382B6D2AAE0081CA95 /* ContentView.swift */,
 				1AD9BB3A2B6D2AB00081CA95 /* Assets.xcassets */,
 				1AD9BB3C2B6D2AB10081CA95 /* Preview Content */,
 			);
@@ -137,7 +137,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1AD9BB392B6D2AAE0081CA95 /* ContentView.swift in Sources */,
+				1AD9BB452B6D2DD80081CA95 /* GameView.swift in Sources */,
 				1AD9BB372B6D2AAE0081CA95 /* GuessingGameApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
