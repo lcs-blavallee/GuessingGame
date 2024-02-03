@@ -12,7 +12,7 @@ struct GameView: View {
     // MARK: Stored properties
     
     // What number the user has guessed
-    @State var selectedNumber = 50
+    @State var givenInput = ""
     
     // What number the computer wants the user to guess
     @State var target = Int.random(in: 1...100)
@@ -34,13 +34,7 @@ struct GameView: View {
                 Text("Guess what it is!")
                     .font(.headline)
                 
-                Stepper(value: $selectedNumber, in: 1...100) {
-                    HStack {
-                        Text("Make a guess:")
-                        Spacer()
-                        Text("\(selectedNumber)")
-                    }
-                }
+                TextField("Make a guess", text: $givenInput)
                 
                 Button {
                     checkGuess()
@@ -98,25 +92,27 @@ struct GameView: View {
         // When should then guess lower?
         // FILL IN THIS CODE
         
-        if target == selectedNumber {
-        feedback = "you guessed it"
-        } else if target > selectedNumber {
-        feedback = "the number is bigger"
-        } else if target < selectedNumber {
-        feedback = "the number is smaller"
+        if target == Int(givenInput)! {
+            feedback = "you guessed it"
+        } else if target > Int(givenInput)! {
+            feedback = "the number is bigger"
+        } else if target < Int(givenInput)! {
+            feedback = "the number is smaller"
         }
         
         
         // Save the user's guesses
-        guessesMade.append(selectedNumber)
-        
+        guard let selectedNumber = Int(givenInput) else {
+            feedback = "Please provide an integer."
+            return
+        }
     }
 
     // Start a new game
     func reset() {
 
-        // Start the user back at 50
-        selectedNumber = 50
+        // Start the user back with an empty string
+        givenInput = ""
         
         // Have the computer guess a new number
         target = Int.random(in: 1...100)
