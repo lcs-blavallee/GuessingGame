@@ -87,25 +87,30 @@ struct GameView: View {
     // MARK: Functions
     func checkGuess() {
         
+        
+        // Attempt to unwrap the input provided by the user
+        guard let selectedNumber = Int(givenInput) else {
+            feedback = "Please provide an integer."
+            return
+        }
+        
         // Provide feedback to the user
         // When should they guess higher?
         // When should then guess lower?
         // FILL IN THIS CODE
         
-        if target == Int(givenInput)! {
-            feedback = "you guessed it"
-        } else if target > Int(givenInput)! {
-            feedback = "the number is bigger"
-        } else if target < Int(givenInput)! {
-            feedback = "the number is smaller"
+        if target == selectedNumber {
+        feedback = "you guessed it"
+        } else if target > selectedNumber {
+        feedback = "the number is bigger"
+        } else if target < selectedNumber {
+        feedback = "the number is smaller"
         }
         
         
         // Save the user's guesses
-        guard let selectedNumber = Int(givenInput) else {
-            feedback = "Please provide an integer."
-            return
-        }
+        guessesMade.append(selectedNumber)
+        
     }
 
     // Start a new game
